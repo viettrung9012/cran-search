@@ -1,0 +1,7 @@
+version: "3.7"
+services:
+
+  cran-search:
+    build: .
+    ports:
+      - 8080:8080
