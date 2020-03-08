@@ -2,7 +2,7 @@
 ## Description
 This is an application to read the list of packages from CRAN server, store their details in DB and expose a REST API endpoint to query for the packages
 ## Architecture
-
+![Architecture Diagram](./CRAN-Search-Architecture.png)
 ## Requirements
 - Docker Engine - 19.03.5
 - docker-compose - 1.25.4
