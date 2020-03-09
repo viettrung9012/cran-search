@@ -21,4 +21,4 @@ COPY --from=builder app/dependencies/ ./
 COPY --from=builder app/snapshot-dependencies/ ./
 COPY --from=builder app/resources/ ./
 COPY --from=builder app/application/ ./
-ENTRYPOINT ["java", "org.springframework.boot.loader.JarLauncher"]
+ENTRYPOINT ["java", "-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005", "org.springframework.boot.loader.JarLauncher"]

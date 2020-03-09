@@ -41,3 +41,11 @@ Run
 ```shell script
 ./mvnw spring-boot:run
 ```
+
+### Intellij IDEA
+Open project and run CranSearchApplication
+#### Debug
+##### For Docker run
+Setup Remote Debug in Configuration and run
+##### For running directly from Intellij IDEA
+Just run with debug mode instead of normal run mode

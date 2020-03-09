@@ -6,6 +6,7 @@ services:
     restart: always
     ports:
       - 8080:8080
+      - 5005:5005
     depends_on:
       - mongo
     networks:
