@@ -1,0 +1,4 @@
+spring.data.mongodb:
+  database: cran
+  host: localhost
+  port: 27017
