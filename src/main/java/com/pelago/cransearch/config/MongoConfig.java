@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.data.mongodb.core.WriteResultChecking;
 
 import java.util.Arrays;
 import java.util.List;
@@ -29,7 +30,9 @@ public class MongoConfig {
 
     @Bean
     public MongoTemplate getMongoTemplate() {
-        return new MongoTemplate(getMongoClient(), database);
+        final MongoTemplate template = new MongoTemplate(getMongoClient(), database);
+        template.setWriteResultChecking(WriteResultChecking.EXCEPTION);
+        return template;
     }
 
     @Bean
