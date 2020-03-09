@@ -1,7 +1,7 @@
-package com.pelago.cransearch.services;
+package com.pelago.cransearch.service;
 
-import com.pelago.cransearch.models.Contributor;
-import com.pelago.cransearch.models.Package;
+import com.pelago.cransearch.model.Contributor;
+import com.pelago.cransearch.model.Package;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;

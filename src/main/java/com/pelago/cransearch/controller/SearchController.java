@@ -1,7 +1,7 @@
-package com.pelago.cransearch.controllers;
+package com.pelago.cransearch.controller;
 
-import com.pelago.cransearch.models.Package;
-import com.pelago.cransearch.services.SearchService;
+import com.pelago.cransearch.model.Package;
+import com.pelago.cransearch.service.SearchService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.RequestMapping;

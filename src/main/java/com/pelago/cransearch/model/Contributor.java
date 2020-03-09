@@ -1,4 +1,4 @@
-package com.pelago.cransearch.models;
+package com.pelago.cransearch.model;
 
 import lombok.Builder;
 import lombok.Data;
