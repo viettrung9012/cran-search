@@ -15,7 +15,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 public class SwaggerConfig implements WebMvcConfigurer {
     @Bean
     public Docket apiDocket() {
-        return new Docket(DocumentationType.SPRING_WEB)
+        return new Docket(DocumentationType.SWAGGER_2)
                 .select()
                 .apis(RequestHandlerSelectors.basePackage("com.pelago.cransearch.controller"))
                 .paths(PathSelectors.any())
