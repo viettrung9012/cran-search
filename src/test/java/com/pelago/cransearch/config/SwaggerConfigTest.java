@@ -9,6 +9,7 @@ import springfox.documentation.spi.DocumentationType;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.when;
 import static org.mockito.Mockito.verify;
 
@@ -34,7 +35,7 @@ class SwaggerConfigTest {
     public void addViewControllers() {
         when(registry.addViewController(eq("/"))).thenReturn(registration);
         config.addViewControllers(registry);
-        verify(registry).addViewController(eq("/"));
-        verify(registration).setViewName(eq("redirect:/swagger-ui.html"));
+        verify(registry, times(1)).addViewController(eq("/"));
+        verify(registration, times(1)).setViewName(eq("redirect:/swagger-ui.html"));
     }
 }
