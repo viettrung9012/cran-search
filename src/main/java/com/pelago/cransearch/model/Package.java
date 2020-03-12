@@ -18,6 +18,7 @@ public class Package {
     @Indexed(unique = true)
     @NonNull
     private String packageName;
+    @NonNull
     private String version;
     private LocalDateTime datePublication;
     private String title;

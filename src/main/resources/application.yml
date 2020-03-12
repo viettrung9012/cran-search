@@ -4,3 +4,7 @@ spring:
       database: cran
       host: localhost
       port: 27017
+
+package-retriever:
+  initial-delay: 0
+  fixed-rate: 86400000 # 1 day
