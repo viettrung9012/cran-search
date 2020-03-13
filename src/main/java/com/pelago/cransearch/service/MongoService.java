@@ -25,7 +25,7 @@ public class MongoService {
     }
 
     public List<Package> findPackage(String query) {
-        return mongoTemplate.find(query(where("packageName").regex(query, "i")), Package.class);
+        return mongoTemplate.find(query(where("name").regex(query, "i")), Package.class);
     }
 
     public void savePackage(Package pack) {

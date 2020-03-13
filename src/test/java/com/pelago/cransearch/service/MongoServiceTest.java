@@ -38,7 +38,7 @@ class MongoServiceTest {
         verify(template, times(1)).find(queryCaptor.capture(), eq(Package.class));
         final Query capturedQuery = queryCaptor.getValue();
         assertNotNull(capturedQuery);
-        assertTrue(capturedQuery.getQueryObject().containsKey("packageName"));
-        assertEquals(query, capturedQuery.getQueryObject().get("packageName").toString());
+        assertTrue(capturedQuery.getQueryObject().containsKey("name"));
+        assertEquals(query, capturedQuery.getQueryObject().get("name").toString());
     }
 }

@@ -17,7 +17,7 @@ import java.util.List;
 public class Package {
     @Indexed(unique = true)
     @NonNull
-    private String packageName;
+    private String name;
     @NonNull
     private String version;
     private LocalDateTime datePublication;

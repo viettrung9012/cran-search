@@ -13,13 +13,13 @@ class PackageTest {
 
     @Test
     public void testVersionNotNull() {
-        assertThrows(NullPointerException.class, () -> Package.builder().packageName("test package").build());
+        assertThrows(NullPointerException.class, () -> Package.builder().name("test package").build());
     }
 
     @Test
     public void testValidPackage() {
-        final Package pack = Package.builder().packageName("test").version("1").build();
-        assertEquals("test", pack.getPackageName());
+        final Package pack = Package.builder().name("test").version("1").build();
+        assertEquals("test", pack.getName());
         assertEquals("1", pack.getVersion());
     }
 }
